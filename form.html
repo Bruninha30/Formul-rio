@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script></script>
+    <title>Formulario</title>
+</head>
+<body>
+    <h1> Formulário de carrinho de Compras</h1>
+<form class="carrinhoForm" action="https://formspree.io/f/xovqybkp" method="post">
+    <!--Nome do cliente-->
+    <div class="form-group">
+    <label for="nome"> Nome do Cliente:</label>
+    <input type="text" id="nome" name="nome" required><br><br>
+</div>
+<!--Endereço-->
+<div class="form-group">
+    <label for="endereço" >Endereço:</label>
+    <input type="text" id="endereço" name="endereço" required>
+</div>
+<!--Telefone-->
+<div class="form-group">
+    <label for="telefone">Telefone:</label>
+    <input type="text" id="telefone" name="telefone" required><br><br>
+</div>
+<!-- Produtos selecionado -->
+<div class="form-group">
+   <h2><label for="Produtos:"> Produtos:</label><br></h2> 
+    <label> <input type="checkbox" name="produto" value="Produto1">Perfumaria</label><br>
+    <label><input type="checkbox" name="produto" value="Produto 1">Cuidados Diario</label><br>
+    <label><input type="checkbox" name="produto" value="Produto 2">Maquiagens</label><br>
+    <label><input type="checkbox" name="produto" value="Produto 3">Rostos</label><br>
+</div>
+<!--Mètodo de pagamento-->
+<div class="form-group">
+    <label for="pagamento"> Método de pagamento</label>
+    <select id="pagamento" name="pagamento" required>
+        <option value=""> Selecione</option>
+        <option> Cartão de Crédito</option>
+        <option> Cartão de Débito</option>
+        <option> Pix </option>
+    </select>
+</div>
+    <!--Cupom-->
+ <div class="form-group">
+    <label for="cupom"> Cupom de Desconto:</label>
+    <input type="text" id="cupom" name="cupom" required placeholder="Digite o cupom"><br>
+    <small  id="cupomMsg" style="color: green; display: none;"> Cupom válido!</small>
+    <small  id="cupomMsg" style="color: red; display: none;">Cupom inválido </small>
+ </div>
+ <!-- Botão de envio-->
+<div class="form-group">
+    <button type="button" onclick="validarCupom()">Validar Cupom</button>  
+</div>
+<div>
+    <button type="submit">Finalizar Compra</button>
+</div>
+</form>
+
+    <script src="index.js"></script>
+</body>
+</html>
